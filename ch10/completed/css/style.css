@@ -1,0 +1,268 @@
+/* 공통 스타일 */
+:root {
+  --font-family: 'Arial', sans-serif;
+  --color-primary: #97403d;
+  --color-secondary: #666;
+  --color-background: #f9f9f9;
+  --color-text: #333;
+  --color-border: #ddd;
+}
+
+/* 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+body {
+  display: flex; /* 추가 */
+  flex-direction: column; /* 추가 */
+  min-height: 100vh;
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* 버튼 스타일 */
+.button {
+  padding: 10px 20px; /* 상하 10px 좌우 20px */
+  font-size: 14px;
+  color: white;
+  border-radius: 4px;
+  background-color: var(--color-primary);
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+/* 헤더 및 네비게이션 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* 상하 10px 좌우 20px */
+  background-color: white;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.logo img {
+  width: 100px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item a {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-item.active a {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* 본문 */
+main {
+  flex: 1; /* 추가 */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-title {
+  margin-top: 30px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 20px;
+}
+
+.menu-item {
+  padding: 10px;
+  text-align: center;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.menu-name {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.menu-price {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+.menu-button {
+  margin-top: 10px;
+}
+
+/* 푸터 */
+footer {
+  padding: 30px 0;
+  background-color: var(--color-text);
+}
+
+.copyright {
+  text-align: center;
+  color: #999;
+}
+
+/* 팝업 스타일 */
+.popup {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:rgba(0,0,0,0.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  display: none; /* 추가 */
+}
+
+.popup-content {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  background-color:white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.popup-close img {
+  width: 25px;
+}
+
+.popup-body {
+  display: flex;
+  gap: 20px;
+}
+
+.popup-left img {
+  width: 400px;
+}
+
+.popup-right {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.popup-title {
+  font-size: 24px;
+}
+
+.popup-details {
+  font-size: 16px;
+  color: var(--color-secondary);
+  margin-top: 10px;
+}
+
+.popup-price {
+  display: block; /* 개행을 위해 사용 */
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.popup-form {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+.popup-option {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.popup-option select {
+  font-size: 16px;
+  width: 150px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.popup-button {
+  margin-top: 20px;
+  width: 100%;
+  background: var(--color-primary);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .menu-list {
+    grid-template-columns: 1fr;
+  }
+  
+  /* 추가 */
+  .popup {
+    padding: 0 20px; /* 모바일 화면에서 좌우 여백 추가 */
+  }
+  
+  .popup-body {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .popup-left img {
+    width: 100%;
+  }
+
+  .popup-right {
+    margin-top: 0; /* 불필요한 여백 제거 */
+  }
+}

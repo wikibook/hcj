@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위키카페</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <header>
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="위키카페">
+        </a>
+      </h1>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item active"><a href="#">커피</a></li>
+          <li class="nav-item"><a href="#">음료</a></li>
+          <li class="nav-item"><a href="#">디저트</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 본문 -->
+    <main>
+      <h2 class="menu-title">커피</h2>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <img src="images/menu1.jpg" alt="아메리카노">
+          <h3 class="menu-name">아메리카노</h3>
+          <p class="menu-price">4,500원</p>
+          <button class="button menu-button">상세 보기</button>
+        </li>
+        <li class="menu-item">
+          <img src="images/menu2.jpg" alt="카페 라떼">
+          <h3 class="menu-name">카페 라떼</h3>
+          <p class="menu-price">5,000원</p>
+          <button class="button menu-button">상세 보기</button>
+        </li>
+        <li class="menu-item">
+          <img src="images/menu3.jpg" alt="카푸치노">
+          <h3 class="menu-name">카푸치노</h3>
+          <p class="menu-price">5,000원</p>
+          <button class="button menu-button">상세 보기</button>
+        </li>
+        <li class="menu-item">
+          <img src="images/menu4.jpg" alt="카페 모카">
+          <h3 class="menu-name">카페 모카</h3>
+          <p class="menu-price">5,500원</p>
+          <button class="button menu-button">상세 보기</button>
+        </li>
+        <li class="menu-item">
+          <img src="images/menu5.jpg" alt="카라멜 마키아또">
+          <h3 class="menu-name">카라멜 마키아또</h3>
+          <p class="menu-price">5,900원</p>
+          <button class="button menu-button">상세 보기</button>
+        </li>
+      </ul>
+    </main>
+    <!-- 푸터 -->
+    <footer>
+      <p class="copyright">Copyright ©위키카페 All rights reserved.</p>
+    </footer>
+    <!-- 팝업 -->
+    <div class="popup">
+      <div class="popup-content">
+        <button class="popup-close"><img src="images/close.png" alt="닫기"></button>
+        <div class="popup-body">
+          <div class="popup-left">
+            <img src="images/menu1.jpg" alt="아메리카노">
+          </div>
+          <div class="popup-right">
+            <div class="popup-description">
+              <h4 class="popup-title">아메리카노</h4>
+              <p class="popup-details">다크 풍미의 깊고 진한 아메리카노 커피</p>
+              <span class="popup-price">4,000원</span>
+            </div>
+            <form id="orderForm" class="popup-form">
+              <div class="popup-option">
+                <label>
+                  <input type="radio" name="temperature" value="HOT" checked> HOT
+                </label>
+                <label>
+                  <input type="radio" name="temperature" value="ICED"> ICED
+                </label>
+              </div>
+              <div class="popup-option">
+                <label>
+                  사이즈
+                  <select name="size">
+                    <option>Small</option>
+                    <option>Regular</option>
+                    <option>Large</option>
+                  </select>
+                </label>
+              </div>
+              <div class="popup-option">
+                <label>
+                  테이크아웃
+                  <input type="checkbox" name="takeout">
+                </label>
+              </div>
+              <button type="submit" class="button popup-button">주문하기</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

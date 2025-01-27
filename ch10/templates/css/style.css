@@ -1,0 +1,35 @@
+/* 공통 스타일 */
+:root {
+  --font-family: 'Arial', sans-serif;
+  --color-primary: #97403d;
+  --color-secondary: #666;
+  --color-background: #f9f9f9;
+  --color-text: #333;
+  --color-border: #ddd;
+}
+
+/* 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
