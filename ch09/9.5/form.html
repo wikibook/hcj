@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>9.5. 폼 요소 조작하기</title>
+  </head>
+  <body>
+    <div>
+      <select id="size">
+        <option value="small">small</option>
+        <option value="medium">medium</option>
+        <option value="large">large</option>
+      </select>
+      <input type="text" id="product" placeholder="상품명을 입력해 주세요">
+      <button id="orderButton">주문하기</button>
+    </div>
+    <script>
+      const product = document.getElementById("product");
+      const size = document.getElementById("size");
+
+      orderButton.addEventListener("click", () => {
+// 상품명을 입력하지 않았을 경우 경고창 띄우기
+        if (product.value === "") {
+          alert("상품명을 입력해 주세요!");
+          return; // 이후 코드 실행을 중단하고 함수 종료
+        }
+        alert(`주문 내역: [${size.value}] ${product.value}`);
+      });
+    </script>
+  </body>
+</html>

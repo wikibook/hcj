@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>9.2.	HTML 콘텐츠 조작하기</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="title">빈티지 데님 셔츠</h1>
+      <p id="price">39,800원</p>
+      <img id="thumbnail" src="./img-shirt.jpg" width="500px" alt="썸네일" />
+      <br> <!-- 인라인 요소 간의 분리를 위해 사용 -->
+      <button id="orderButton" style="font-size: 20px;">주문하기</button>
+    </div>
+    <script>
+      const title = document.getElementById("title");
+      console.log(title.textContent); // 현재 텍스트 조회
+      title.textContent = "화이트 반팔 셔츠"; // 새 텍스트로 수정
+
+      const price = document.getElementById("price");      
+      price.innerHTML = "<strong>39,800</strong>원"; // 새 콘텐츠로 수정
+      console.log(price.innerHTML);
+
+      const thumbnail = document.getElementById("thumbnail");
+      console.log(thumbnail.getAttribute("src")); // src 값 조회
+
+      thumbnail.setAttribute("src", "./img-shirt2.jpg"); // 속성값 변경
+      console.log(thumbnail.getAttribute("src"));
+
+      const orderButton = document.getElementById("orderButton");
+      orderButton.setAttribute("disabled", "true");
+      orderButton.removeAttribute("disabled");
+    </script>
+  </body>
+</html>

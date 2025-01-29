@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>9.3.	CSS 스타일 수정하기</title>
+    <style>
+      .done {
+        text-decoration: line-through;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>오늘의 할 일</h4>
+    <ul>
+      <li id="addStyle">아침 조깅하기</li>
+      <li id="removeStyle" class="done">영어 공부하기</li>
+      <li id="toggleStyle">친구랑 저녁먹기</li>
+    </ul>
+    <script>
+      const addStyle = document.getElementById("addStyle");
+      // addStyle.style.textDecoration = "line-through";
+      // addStyle.style.color = "gray";
+      addStyle.classList.add("done");
+
+      const removeStyle = document.getElementById("removeStyle");
+      removeStyle.classList.remove("done");
+
+      const toggleStyle = document.getElementById("toggleStyle");
+      toggleStyle.classList.toggle("done");
+    </script>
+  </body>
+</html>
