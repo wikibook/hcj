@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.7.	반응형 디자인 구현하기</title>
+    <style>
+      body {
+        font-size: 30px;
+        background-color: lightblue;
+      }
+
+      @media screen and (max-width: 600px) {
+        body {
+          background-color: lightpink;
+        }
+      }
+
+      @media (min-width: 601px) and (max-width: 1199px) {
+        body {
+          background-color: yellow;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        body {
+          background-color: lightgreen;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    기본값: 하늘색<br>
+    600px 이하: 분홍색<br>
+    601px 이상 1199px 이하: 노란색<br>
+    1200px 이상: 연두색<br>
+  </body>
+</html>

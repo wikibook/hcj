@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.7.3.	유튜브 카드 레이아웃 따라 하기</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .item {
+        background-color: pink;
+        border-radius: 4px;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        flex: 1 1 calc(100% - 10px); /* 모바일 크기 */
+      }
+
+      /* 태블릿 크기 (601px 이상 768px 이하) */
+      @media (min-width: 601px) and (max-width: 768px) {
+        .item {
+          flex: 1 1 calc(50% - 10px);
+        }
+      }
+
+      /* PC 크기 (769px 이상) */
+      @media (min-width: 769px) {
+        .item {
+          flex: 1 1 calc(25% - 10px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="item">영상 1</div>
+      <div class="item">영상 2</div>
+      <div class="item">영상 3</div>
+      <div class="item">영상 4</div>
+      <div class="item">영상 5</div>
+      <div class="item">영상 6</div>
+      <div class="item">영상 7</div>
+      <div class="item">영상 8</div>
+    </main>
+  </body>
+</html>

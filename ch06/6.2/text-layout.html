@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>6.2. 텍스트 레이아웃 속성</title>
+    <style>
+      /* 예제 6.6 */
+      body { font-size: 16px; }
+      .line-number { line-height: 2; } /* 32px */
+      .line-percent { line-height: 100%; } /* 16px */
+      .line-pixel { line-height: 24px; }
+
+      /* 예제 6.7 */
+      a { text-decoration: none; }
+
+      /* 예제 6.8 */
+      .letter-em { letter-spacing: 1em; } /* 16px */
+      .letter-pixel { letter-spacing: 10px; }
+
+      /* 예제 6.9 */
+      .letter-spacing { letter-spacing: 10px; }
+      .word-spacing { word-spacing: 10px; }
+    </style>
+  </head>
+  <body>
+    <h2>line-height</h2>
+    <p class="line-number">
+      캐나다는 북아메리카 대륙 북부의 연방 국가입니다.<br/>
+      면적은 약 1000만 제곱킬로미터에 이르며, 러시아에 이어 세계에서 두 번째로 큰 나라입니다.
+    </p>
+    <p class="line-percent">
+      캐나다는 북아메리카 대륙 북부의 연방 국가입니다.<br/>
+      면적은 약 1000만 제곱킬로미터에 이르며, 러시아에 이어 세계에서 두 번째로 큰 나라입니다.
+    </p>
+    <p class="line-pixel">
+      캐나다는 북아메리카 대륙 북부의 연방 국가입니다.<br/>
+      면적은 약 1000만 제곱킬로미터에 이르며, 러시아에 이어 세계에서 두 번째로 큰 나라입니다.
+    </p>
+    <h2>text-decoration</h2>
+    <a href="#">캐나다 더 알아보기</a>
+    <h2>letter-spacing</h2>
+    <p class="letter-em">
+      캐나다는 북아메리카 대륙 북부의 연방 국가입니다.
+    </p>
+    <p class="letter-pixel">
+      캐나다는 북아메리카 대륙 북부의 연방 국가입니다.
+    </p>
+    <h2>word-spacing</h2>
+    <p>
+      캐나다는 북아메리카 대륙 북부의 연방 국가입니다.
+    </p>
+    <p class="letter-spacing">
+      캐나다는 북아메리카 대륙 북부의 연방 국가입니다.
+    </p>
+    <p class="word-spacing">
+      캐나다는 북아메리카 대륙 북부의 연방 국가입니다.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>4.4. 표 만들기</title>
+    <!-- 예제 4.15 -->
+    <style>
+      table, th, td {
+        border: 1px solid gray; /* 셀 사이의 겹치는 선을 하나로 합치는 속성 */
+        border-collapse: collapse; /* 테두리의 스타일을 정의하는 속성 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 예제 4.14 -->
+    <table>
+      <caption>8월 가계부</caption>
+      <tr>
+        <th>날짜</th>
+        <th>항목</th>
+        <th>지출</th>
+      </tr>
+      <tr>
+        <th>8/2</th>
+        <td>피자</td>
+        <td>20,000원</td>
+      </tr>
+      <tr>
+        <th>8/2</th>
+        <td>아메리카노</td>
+        <td>5,000원</td>
+      </tr>
+      <tr>
+        <th>8/1</th>
+        <td>샐러드</td>
+        <td>10,000원</td>
+      </tr>
+    </table>
+
+    <!-- 예제 4.16 -->
+    <table>
+      <caption>8월 가계부</caption>
+      <tr>
+        <th>날짜</th>
+        <th>항목</th>
+        <th>지출</th>
+      </tr>
+      <tr>
+        <th rowspan="2">8/2</th>
+        <td>피자</td>
+        <td>20,000원</td>
+      </tr>
+      <tr>
+        <!-- <th>8/2</th> 삭제 -->
+        <td>아메리카노</td>
+        <td>5,000원</td>
+      </tr>
+      <tr>
+        <th>8/1</th>
+        <td>샐러드</td>
+        <td>10,000원</td>
+      </tr>
+    </table>
+  </body>
+</html>

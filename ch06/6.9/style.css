@@ -1,0 +1,36 @@
+/* 일반 글꼴 (400) */
+@font-face {
+  font-family: 'Nanum Gothic';
+  src: url('fonts/NanumGothic-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 굵은 글꼴 (700) */
+@font-face {
+  font-family: 'Nanum Gothic';
+  src: url('fonts/NanumGothic-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* 더 굵은 글꼴 (800) */
+@font-face {
+  font-family: 'Nanum Gothic';
+  src: url('fonts/NanumGothic-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* HTML에 폰트를 적용하기 위한 클래스 코드 */
+.font-nanum {
+  font-family: 'Nanum Gothic';
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extra-bold {
+  font-weight: 800;
+}

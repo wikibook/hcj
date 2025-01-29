@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>6.8.2.	animation 속성으로 애니메이션 효과 적용하기</title>
+    <style>
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+      }
+      .ball {
+          width: 50px;
+          height: 50px;
+          background-color: orange;
+          border-radius: 50%;
+          position: relative;
+          animation: bounce 2s ease-in-out infinite;
+      }
+      @keyframes bounce {
+          0%, 100% {
+              top: 0;
+              opacity: 1;
+          }
+          50% {
+              top: -200px;
+              opacity: 50%;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"></div>
+  </body>
+</html>

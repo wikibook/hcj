@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>5.4.	CSS 기본 선택자</title>
+    <style>
+      /* 예제 5.8 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* 예제 5.9 */
+      span {
+        color: hotpink;
+      }
+      /* 예제 5.10 */
+      .price {
+        font-weight: bold;
+      }
+      /* 예제 5.11 */
+      #container {
+        padding: 10px;
+        border: 1px solid grey;
+      }
+      /* (...생략...) */
+      button[type] {
+        padding: 5px;
+        border: none;
+      }
+      button[type="submit"] {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="container">
+      <h2>산지직송 논산 딸기</h2>
+      <span>1팩(800g)</span>
+      <span>29,900원</span>
+      <button type="submit">구매하기</button>
+      <button type="button">장바구니</button>
+    </main>
+  </body>
+</html>

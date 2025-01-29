@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>6.5.	기본 레이아웃 속성</title>
+    <style>
+      header {
+        width: 100%;
+        height: 70px;
+        background-color: lightblue;
+        padding: 0 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      h2 {
+        display: inline-block;
+      }
+      main {
+        margin-top: 70px;
+        position: relative; /* main 요소를 기준으로 .item 요소를 배치 */
+      }
+      .item {
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+        text-align: right; /* 텍스트를 확인하기 위해 추가 */
+        position: absolute; /* z-index를 사용하기 위해 absolute 속성을 추가 */
+        top: 0;
+        left: 0;
+      }
+      .grape {
+        background-color: plum;
+        width: 50px;
+        z-index: 4;
+      }
+      .orange {
+        background-color: orange;
+        width: 100px;
+        z-index: 3;
+      }
+      .watermelon {
+        background-color: lightgreen;
+        width: 150px;
+        z-index: 2;
+      }
+      .tomato {
+        background-color: lightcoral;
+        width: 200px;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>H마트</h2>
+      <span>오늘의 할인</span>
+    </header>
+    <main>
+      <div class="item grape">달콤한 포도</div>
+      <div class="item orange">상큼한 오렌지</div>
+      <div class="item watermelon">시원한 수박</div>
+      <div class="item tomato">멋쟁이 토마토</div>
+    </main>
+  </body>
+</html>

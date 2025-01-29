@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>6.5.4.	어디에 띄울까? float</title>
+    <style>
+      header {
+        width: 100%;
+        height: 70px;
+        background-color: lightblue;
+        padding: 0 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      h2 {
+        display: inline-block;
+      }
+      main {
+        margin-top: 80px;
+        border: 1px solid gray;
+      }
+      .item {
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+      }
+      .grape {
+        background-color: plum;
+        float: left;
+      }
+      .orange {
+        background-color: orange;
+        float: right;
+      }
+      main::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>H마트</h2>
+      <span>장바구니</span>
+    </header>
+    <main>
+      <div class="item grape">달콤한 포도</div>
+      <div class="item orange">상큼한 오렌지</div>
+    </main>
+  </body>
+</html>
