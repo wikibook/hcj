@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>7.1.7. 템플릿으로 그리드 쉽게 사용하기</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-rows: repeat(4, 100px);
+        grid-template-columns: repeat(4, 100px);
+        grid-template-areas: 
+        "header header header header"
+        "sidebar . main main"
+        "sidebar . main main"
+        "footer footer footer footer";
+      }
+      .top {
+        grid-area: header;
+        background-color: lightblue;
+      }
+      .side {
+        grid-area: sidebar;
+        background-color: yellow;
+      }
+      .content {
+        grid-area: main;
+        background-color: lightgreen;
+      }
+      .bottom {
+        grid-area: footer;
+        background-color: plum;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="top">header</div>
+      <div class="side">sidebar</div>
+      <div class="content">main</div>
+      <div class="bottom">footer</div>
+    </main>
+  </body>
+</html>

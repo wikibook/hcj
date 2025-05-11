@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>7.3.3.	자유자재로 변형하는 transform</title>
+    <style>
+      div {
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+          background-color: lightblue;
+          margin: 50px;
+      }
+      .translate { transform: translate(50px, 10px); }
+      .rotate { transform: rotate(45deg); }
+      .scale { transform: scale(2, 1.5); }
+      .skew { transform: skew(20deg, 10deg); }
+      .mixed { transform: translate(50px, 10px) rotate(45deg); }
+    </style>
+  </head>
+  <body>
+    <div>기본값</div>
+    <div class="translate">translate</div>
+    <div class="rotate">rotate</div>
+    <div class="scale">scale</div>
+    <div class="skew">skew</div>
+    <div class="mixed">translate + rotate</div>
+  </body>
+</html>

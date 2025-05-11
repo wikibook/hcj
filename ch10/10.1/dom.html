@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>10.1. DOM으로 요소에 접근하기</title>
+  </head>
+  <body>
+    <div>
+      <h1>신상품</h1>
+      <p>빈티지 데님 셔츠</p>
+      <ul>
+        <li id="shirt">빈티지 데님 셔츠</li>
+        <li class="winter">기능성 롱 패딩</li>
+        <li class="winter">울 캐시미어 니트</li>
+        <li>트레이닝 바지</li>
+      </ul>
+    </div>
+    <script>
+      // ID로 요소 접근하기
+      const shirt = document.getElementById("shirt");
+      console.log(shirt);
+
+      // 클래스와 태그로 요소 접근하기
+      const winter = document.getElementsByClassName("winter");
+      console.log(winter);
+      const items = document.getElementsByTagName("li");
+      console.log(items);
+
+      // CSS 선택자로 요소 선택하기
+      const firstChild = document.querySelector("ul > li:first-child");
+      console.log(firstChild);
+      const querySelector = document.querySelectorAll(".winter");
+      console.log(querySelector);
+    </script>
+  </body>
+</html>
